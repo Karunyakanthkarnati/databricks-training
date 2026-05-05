@@ -39,4 +39,21 @@ Q14
 select * from Employee
 where hire_date >= '2021-03-01'
 Q15
-
+SELECT name, hire_date
+FROM Employee
+WHERE hire_date >= CURDATE() - INTERVAL 2 YEAR;
+Q16
+select sum(salary) from Employee
+            or
+select avg(salary)*count(emp_id) from Employee
+Q17
+select avg(salary) from Employee
+Q18
+select min(salary) from Employee
+Q19
+SELECT department_id, COUNT(*)
+FROM Employee
+GROUP BY department_id;
+Q20
+select department_id,avg(salary) from Employee
+group by department_id
