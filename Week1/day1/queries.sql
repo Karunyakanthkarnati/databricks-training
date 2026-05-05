@@ -26,3 +26,17 @@ where LENGTH(name)=9
 Q10
 select * from Employee
 where name like '_o%'
+Q11
+select * from Employee
+where YEAR(hire_date)=2020
+Q12
+select * from Employee
+where MONTH(hire_date)=01
+Q13
+select * from Employee
+where YEAR(hire_date)<2019
+Q14
+select * from Employee
+where hire_date >= '2021-03-01'
+Q15
+
