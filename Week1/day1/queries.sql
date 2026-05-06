@@ -75,3 +75,23 @@ FROM Employee
 GROUP BY department_id
 ORDER BY AVG(salary) DESC
 LIMIT 1;
+Q26
+select department_id from Employee
+group by department_id
+having count(emp_id)>2
+Q27
+select department_id from Employee
+group by department_id
+having avg(salary)>55000
+Q28
+select year(hire_date) from Employee
+group by year(hire_date)
+having count(emp_id)>1
+Q29
+select department_id from Employee
+group by department_id
+having sum(salary)<100000
+Q30
+select department_id from Employee
+group by department_id
+having max(salary)>70000
