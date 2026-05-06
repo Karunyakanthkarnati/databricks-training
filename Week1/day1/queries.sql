@@ -57,3 +57,21 @@ GROUP BY department_id;
 Q20
 select department_id,avg(salary) from Employee
 group by department_id
+Q21
+select department_id,sum(salary) from Employee
+group by department_id
+Q22
+select department_id,avg(age) from Employee
+group by department_id
+Q23
+select year(hire_date),count(emp_id) from Employee
+group by year(hire_date)
+Q24
+select department_id,max(salary) from Employee
+group by department_id
+Q25
+select department_id
+FROM Employee
+GROUP BY department_id
+ORDER BY AVG(salary) DESC
+LIMIT 1;
