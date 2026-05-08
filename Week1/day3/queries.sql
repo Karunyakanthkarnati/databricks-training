@@ -149,3 +149,42 @@ from Employees
 select  distinct experience
 from Employees
 
+--31. Find employees with salary >= 80000.
+select *
+from Employees
+where salary >= 80000
+
+--32. Find employees with experience <= 3.
+select *
+from Employees
+where experience <=3
+
+--33. Find employees whose salary <> 45000.
+select *
+from Employees
+where salary <> 45000
+
+--34. Find employees with salary < 50000.
+select *
+from Employees
+where salary < 50000
+
+--35. Find employees with experience > 5.
+select *
+from Employees
+where experience > 5
+
+--36. Find employees from IT department AND salary greater than 70000.
+select *
+from Employees
+where department = 'IT' and salary > 70000
+
+--37. Find employees from Hyderabad OR Bangalore.
+select *
+from Employees
+where city = 'Bangalore' or city = 'Hyderabad'
+
+--38. Find employees from HR department AND experience less than 3.
+select *
+from Employees
+where department = 'HR' and experience<3
