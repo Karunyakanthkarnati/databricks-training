@@ -93,3 +93,41 @@ from orders
 --Q24.Format order_date as Month DD, YYYY.
 select order_date,Date_Format(order_date, '%M %d, %Y')
 from orders
+
+--Q25.Convert the string '15-01-2024' into DATE format.
+select str_to_date('15-01-2024','%d-%m-%Y')
+
+--Q26.Format order_timestamp with date and time
+select order_timestamp,DATE_FORMAT(order_timestamp,'%M %d, %Y %H:%i:%s')
+from orders
+
+--Q27.Display all orders placed in January or February.
+select order_id,order_date
+from orders
+where monthname(order_date) in ('january','february')
+
+--Q28.Generate the financial year using CASE.
+select order_date,
+	CASE
+		when month(order_date)>=4 then concat(year(order_date),'-',year(order_date)+1)
+    	else concat(year(order_date)-1,'-',year(order_date))
+	END as Financial_year
+from orders
+
+--Q29.Find orders placed in the last 7 days.
+select order_id,order_date
+from orders
+where datediff(curdate(),order_date) <= 7
+
+--Q30.Find orders placed today.
+select order_id,order_date
+from orders
+where order_date = curdate()
+
+--Q31.Display order ID, customer name, and formatted order date.
+select order_id,customer_name,date_format(order_date,'%M %d, %Y') as order_date
+from orders
+
+--Q32.Find the delivery duration for every order
+select order_id,order_date,delivery_date,datediff(delivery_date,order_date) as delivery_duration
+from orders
