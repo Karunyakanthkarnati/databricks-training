@@ -1,4 +1,4 @@
-# 🚀 Day 7 – SQL NULL Functions Practice
+# 🚀 Day 1 – SQL NULL Functions Practice
 
 ## 📚 Topics Covered
 - ⚠️ NULL Handling
