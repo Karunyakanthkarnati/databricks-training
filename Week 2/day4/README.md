@@ -1,4 +1,3 @@
-````md id="w2m8qx"
 # 🚀 Week 2 – Day 4: MySQL String Functions
 
 ## 📚 Topics Covered
