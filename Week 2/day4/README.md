@@ -1,19 +1,18 @@
 🚀 Week 2 – Day 4: MySQL String Functions Practice
 
 📚 Topics Covered
-🔠 Case Conversion Functions
-✂️ String Trimming Functions
-🔗 String Concatenation
-📌 Substring Extraction
-⬅️ LEFT() Extraction
-➡️ RIGHT() Extraction
-📍 String Position Functions
-🔄 String Replacement
-🔁 String Reversal
-🧱 Padding Functions
-🧹 Combined String Cleaning
-❓ NULL Handling Functions
-📋 CSV Search Function
+🔹 LENGTH / CHAR_LENGTH
+🔹 UPPER / LOWER
+🔹 TRIM / LTRIM / RTRIM
+🔹 CONCAT / CONCAT_WS
+🔹 SUBSTRING / SUBSTR / MID
+🔹 LEFT / RIGHT
+🔹 INSTR / LOCATE
+🔹 REPLACE
+🔹 REVERSE
+🔹 LPAD / RPAD
+🔹 IFNULL / COALESCE
+🔹 FIND_IN_SET
 
 🗂️ Table Used
 🧪 employees
@@ -36,12 +35,15 @@
 🧠 String Function Concepts Learned
 
 🔹 LENGTH() / CHAR_LENGTH()
-Returns number of characters in a string.
 
 ```sql
 LENGTH(full_name)
 CHAR_LENGTH(full_name)
 ````
+
+Returns number of characters in a string.
+
+---
 
 🔹 UPPER() / LOWER()
 
@@ -50,7 +52,9 @@ UPPER(department)
 LOWER(city)
 ```
 
-Converts text into uppercase or lowercase.
+Converts text into uppercase and lowercase.
+
+---
 
 🔹 TRIM() / LTRIM() / RTRIM()
 
@@ -60,25 +64,23 @@ LTRIM(full_name)
 RTRIM(full_name)
 ```
 
-Removes spaces from strings.
+Removes unwanted spaces.
 
-🔹 CONCAT()
+---
+
+🔹 CONCAT() / CONCAT_WS()
 
 ```sql
 CONCAT(full_name,' - ',department)
-```
 
-Combines multiple strings.
-
-🔹 CONCAT_WS()
-
-```sql
 CONCAT_WS(' | ', emp_id, full_name, city)
 ```
 
-Concatenates strings using separators.
+Combines multiple strings together.
 
-🔹 SUBSTRING() / SUBSTR()
+---
+
+🔹 SUBSTRING() / SUBSTR() / MID()
 
 ```sql
 SUBSTRING(email,1,7)
@@ -86,6 +88,8 @@ SUBSTR(email,1,5)
 ```
 
 Extracts part of a string.
+
+---
 
 🔹 LEFT() / RIGHT()
 
@@ -96,21 +100,18 @@ RIGHT(city,3)
 
 Extracts characters from left or right side.
 
-🔹 INSTR()
+---
+
+🔹 INSTR() / LOCATE()
 
 ```sql
 INSTR(email,'@')
+LOCATE('.',email)
 ```
 
 Finds position of substring.
 
-🔹 LOCATE()
-
-```sql
-LOCATE('.',email)
-```
-
-Searches substring position with flexibility.
+---
 
 🔹 REPLACE()
 
@@ -120,6 +121,8 @@ REPLACE(department,'Data','Big Data')
 
 Replaces matching text.
 
+---
+
 🔹 REVERSE()
 
 ```sql
@@ -127,6 +130,8 @@ REVERSE(full_name)
 ```
 
 Reverses string characters.
+
+---
 
 🔹 LPAD() / RPAD()
 
@@ -137,29 +142,19 @@ RPAD(city,15,'*')
 
 Adds padding characters.
 
-🔹 Combined Cleaning
+---
 
-```sql
-TRIM(REPLACE(city,' ',''))
-```
-
-Used for advanced string cleaning.
-
-🔹 IFNULL()
+🔹 IFNULL() / COALESCE()
 
 ```sql
 IFNULL(remarks,'No remarks')
+
+COALESCE(remarks,'N/A')
 ```
 
 Handles NULL values.
 
-🔹 COALESCE()
-
-```sql
-COALESCE(remarks,'N/A')
-```
-
-Returns first non-NULL value.
+---
 
 🔹 FIND_IN_SET()
 
@@ -171,19 +166,13 @@ Searches values in comma-separated lists.
 
 💻 Main String Syntax Used
 
-String extraction:
-
 ```sql
 SUBSTRING(column,start,length)
 ```
 
-Concatenation:
-
 ```sql
 CONCAT(value1,value2)
 ```
-
-Replacement:
 
 ```sql
 REPLACE(column,'old','new')
@@ -191,46 +180,26 @@ REPLACE(column,'old','new')
 
 📝 Practice Questions
 
-🔹 String Length
-Find employee name length
-Find character length
-
-🔹 Case Conversion
-Convert department to uppercase
-Convert city to lowercase
-
-🔹 Trimming Functions
-Remove left spaces
-Remove right spaces
-Remove spaces from both sides
-
-🔹 Concatenation
-Combine employee name and department
-Concatenate using separators
-
-🔹 Substring Extraction
-Extract first characters
-Extract partial email values
-Extract left/right characters
-
-🔹 Position Functions
-Find @ symbol position
-Find . position in emails
-
-🔹 Replacement & Reverse
-Replace department names
-Reverse employee names
-
-🔹 Padding Functions
-Pad employee IDs
-Pad city names
-
-🔹 NULL Handling
-Handle NULL remarks
-Use default values with COALESCE
-
-🔹 CSV Search
-Search values inside comma-separated strings
+🔹 Find employee name length
+🔹 Convert department names to uppercase
+🔹 Convert city names to lowercase
+🔹 Remove spaces using TRIM
+🔹 Remove left-side spaces
+🔹 Remove right-side spaces
+🔹 Concatenate employee name and department
+🔹 Concatenate values using separators
+🔹 Extract first characters from email
+🔹 Extract left-side characters
+🔹 Extract right-side characters
+🔹 Find @ symbol position
+🔹 Find . position in email
+🔹 Replace Data with Big Data
+🔹 Reverse employee names
+🔹 Pad employee IDs using LPAD
+🔹 Pad city names using RPAD
+🔹 Handle NULL remarks using IFNULL
+🔹 Handle NULL values using COALESCE
+🔹 Search values using FIND_IN_SET
 
 📊 Key Learnings
 Learned core MySQL string manipulation functions.
