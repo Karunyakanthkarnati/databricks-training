@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Ravi",
+    "age": 24,
+    "department": "Data Engineering",
+    "salary": 45000
+  },
+  {
+    "id": 2,
+    "name": "Priya",
+    "age": 26,
+    "department": "Analytics",
+    "salary": 50000
+  },
+  {
+    "id": 3,
+    "name": "Arjun",
+    "age": 25,
+    "department": "Data Engineering",
+    "salary": 55000
+  }
+]

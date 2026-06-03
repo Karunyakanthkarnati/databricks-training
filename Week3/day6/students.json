@@ -1,0 +1,20 @@
+[
+  {
+    "student_id": 101,
+    "name": "Rahul",
+    "address": {
+      "city": "Hyderabad",
+      "state": "Telangana"
+    },
+    "skills": ["Python", "SQL", "PySpark"]
+  },
+  {
+    "student_id": 102,
+    "name": "Sneha",
+    "address": {
+      "city": "Bengaluru",
+      "state": "Karnataka"
+    },
+    "skills": ["Java", "Spark"]
+  }
+]
